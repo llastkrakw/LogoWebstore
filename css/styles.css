@@ -1,0 +1,56 @@
+*{
+    font-family: sans-serif;
+}
+#Img img, #Ava div div img{
+    width: 100%;
+    height: auto;
+}
+.row{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+input{
+    float: right;
+}
+#Ava div div{
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+#Ava .row{
+    border: 1px solid;
+}
+nav{
+    padding:10px;
+}
+footer
+{
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+    bottom:0;
+    width:65%;
+}
+
+.fade.in {
+  opacity: 1;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+}
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}

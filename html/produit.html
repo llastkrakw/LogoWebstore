@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Produit</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- JavaScripts -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Image and text -->
+        <a class="navbar-brand" href="#">
+            <img src="../img/logo_lego.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            WebStore
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="produit.html">Produits <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="panier.html">Panier</a>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-dark nav-link my-2 my-lg-0" style="color:gray; border: 1.5px gray solid; border-radius: 30°;" data-toggle="modal" data-target="#connexionmodal"> <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                </svg> Compte </button>
+            <div class="modal fade in" id="connexionmodal" tabindex="-1" role="dialog" aria-labelledby="connexionModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="connexionModalLabel">Connexion</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form>
+                            <div class="modal-body">
+                                <div class="row"><input type="mail" class="form-control" placeholder="xyz@abc.com" required>
+                                    <div class="invalid-feedback">Valeur incorrecte</div>
+                                </div>
+                                <div class="row"><input type="password" class="form-control" placeholder="Nom" required>
+                                    <div class="invalid-feedback">Valeur incorrecte</div>
+                                </div>
+                                <div class="row">
+                                    <button type="submit" class="btn btn-primary" style="width: 100%">Connexion</button>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                <a href="inscription.html" class="btn btn-dark" style="width: 100%">Inscription</a>
+                            </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </nav>
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-8">
+                <div class="row" style="justify-content: center">
+                    <img id="imgp" src="../img/produit_newyork_0.jpeg" />
+                </div>
+                <div class="row" id="Img" style="justify-content: space-between">
+                    <div class="col-2"><img name="img1" src="../img/produit_newyork_0.jpeg" onclick="image_loader(this)"></div>
+                    <div class="col-2"><img id="img2" src="../img/produit_newyork_1.jpeg" onclick="image_loader(this)"></div>
+                    <div class="col-2"><img id="img3" src="../img/produit_newyork_2.jpeg" onclick="image_loader(this)"></div>
+                    <div class="col-2"><img id="img4" src="../img/produit_newyork_3.jpeg" onclick="image_loader(this)"></div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h2>LEGO Architechture</h2>
+                <h3>New York City</h3><br>
+                <h1>49.99$</h1>
+                <hr>
+                <div class="alert alert-success" style="text-align: end">En Stock</div>
+                <form name="Commande">
+                    <div class="row" style="align-content: flex-end">
+                       <button class="btn btn-light" onclick="diminuer_occurence();return false;"> - </button> <input type="number" id="nbre_elements" name="nbre_elts" class="quantity" value="1" style="width:10%;-moz-appearance: textfield; text-align: center; border: 1.5px solid gray"><button class="btn btn-light" onclick="ajouter_occurence();return false;"> + </button>
+                    </div>
+                    <button type="button" id="ajout" class="add-to-cart form-control btn btn-primary " data-id="" data-name="New York City" data-price="49.99">Ajouter au panier</button>
+                </form>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-between">
+            <div class="col-7">
+                <div class="row">
+                    <h4>Description du produit</h4>
+                    <p style="text-align:justify">Fêtez la diversité architecturale de New York avec ce modèle détaillé en briques
+                        LEGO. La collection LEGO Architecture Skyline offre des modèles adaptés à
+                        l'exposition à la maison et au bureau, et a été développée pour toutes les
+                        personnes qui s'intéressent au voyage, à la création, à l'histoire et à
+                        l'architecture.
+                        Chaque ensemble a une échelle adaptée pour donner une idée précise de la taille
+                        comparative de chaque structure, avec une représentation en couleurs réalistes.
+                        Cet ensemble comprend le Flatiron Building, le Chrysler Building, l'Empire State
+                        Building, le One World Trade Center et la Statue de la Liberté, et un écriteau
+                        décoratif “New York”.</p>
+                </div>
+                <div class="row">
+                    <h4>Spécificités</h4>
+                    <p style="text-align: justify">Interprétation LEGO du paysage de New York.
+                        Comprend le Flatiron Building, le Chrysler Building, l'Empire State Building,
+                        le One World Trade Center et la Statue de la Liberté.
+                        Inclut une plaque de base 4x32 avec un écriteau décoratif "New York".
+                        Recréez les plus belles villes du monde avec la collection LEGO Architecture
+                        Skyline.
+                        Mesure 26 cm de haut, 25 cm de large et 4 cm de profondeur.
+                        Source: Site officiel LEGO</p>
+                </div>
+            </div>
+            <div class="col-4" id="Ava">
+                <h4>Avis</h4>
+                <div class="row">
+                    <div class="col-lg-3"><img src="../img/avatar.png"></div>
+                    <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                    <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"><img src="../img/avatar.png"></div>
+                    <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                    <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"><img src="../img/avatar.png"></div>
+                    <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                    <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"><img src="../img/avatar.png"></div>
+                    <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                    <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class=" footer">
+        <hr>
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+
+                <div class="col-md-10 mt-md-0 mt-3">
+
+                    <h3>LEGO WebStore</h3>
+                    Maison de la Recherche Blaise Pascal<br>
+                    50 Rue Ferdinand Buisson<br>
+                    62228, Calais
+
+                </div>
+
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-2 mb-md-0 mb-3">
+
+                    <img src="../img/logo_lego.jpg" width="75px" height="auto">
+                    <h5 class="font-weight-bold">WebStore</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+</body>
+     <script src="../Js/jquery-3.4.1.slim.min.js"></script>
+    <script src="../Js/popper.min.js"></script>
+    <script src="../Js/bootstrap.min.js"></script>
+    <script src="../Js/produit.js"></script>
+    <script src="../Js/panier.js"></script>
+
+</html>
