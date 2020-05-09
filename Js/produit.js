@@ -1,57 +1,19 @@
-function ajouter_occurence() {  
-    if(document.getElementById('nbre_elements').value){
-    document.getElementById('nbre_elements').value++;
-}
-else{
-    document.getElementById('nbre_elements').value=1;
-}
-}
+let qte = 0;//Variable qui gère la quantité que le visiteur souhaite acheter
 
-function diminuer_occurence(){  
-        if(document.getElementById('nbre_elements').value){
-            if(document.getElementById('nbre_elements').value>1){
-    document.getElementById('nbre_elements').value--;
-            }
-            else {
-                document.getElementById('nbre_elements').value=1;
-            }
-}
-else{
-    document.getElementById('nbre_elements').value=1;
-}
-}
+/** Fonction qui permettent respectivement d'incrémenter et de décrémenter la quantité d'un produit dans le panier
+ * On vérifie d'abord si la valeur dans le champ est positive
+ * Si oui, on incrémente/décrémente la quantité et on remplace la "value" du champ
+ * Sinon on revient à 0
+**/
+let ajouter_occurence = () => document.getElementById('nbre_elements').value = (Number(document.getElementById('nbre_elements').value)>0) ? String(++qte) : "0";
+let diminuer_occurence = () => document.getElementById('nbre_elements').value = (Number(document.getElementById('nbre_elements').value)) ? String(--qte) : "0";
 
-function image_loader(image){
-    const imagep=document.querySelector('#imgp');
-    imagep.src=image.src;
-}
+//Fonction qui permet de charger une image en miniature sur la vitrine
+let image_loader = (image) => document.querySelector('#imgp').src = image.src;
 
-
-class Objet {
-                constructor(date, avis) {
-                    this.date = date;
-                    this.avis = avis;
-                }
-                popup() {
-                    console.log("{"+ this.date + ", " + this.avis +"}")
-                }
-            };
-            let cpt = 0;
-            document.querySelector("#add").addEventListener("click", function () {
-                document.querySelector("#qte").innerHTML = ++cpt;
-            });
-            document.querySelector("#substract").addEventListener("click", function () {
-                document.querySelector("#qte").innerHTML = (cpt>0) ? --cpt : 0;
-            });
-            let selectImg = document.querySelector("#selectImg").childNodes;
-            for(let i=0; i<selectImg.length; i++) 
-                selectImg[i].addEventListener("click", function () {
-                   document.querySelector("#view").setAttribute("src", this.getAttribute("src"));
-                });
-                
-            document.querySelector("#Submit").addEventListener("click", function () {
-                const date = new Date();
-                let jour = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
-                const obj = new Objet(jour, document.querySelector("#Avis").value);
-                obj.popup();
-            });
+//Fonction qui affiche en console l'objet d'avis du visiteur après le clique sur le bouton d'envoi
+document.querySelector("#Submit").addEventListener("click", function () {
+    const day = new Date();
+    const newObject = {date: date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear(), avis : document.querySelector("#Avis").value};
+    console.log(newObject);
+});
