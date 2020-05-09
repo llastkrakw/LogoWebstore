@@ -13,11 +13,10 @@ input{
     float: right;
 }
 #Ava div div{
-    margin-top: 2.5px;
-    margin-bottom: 2.5px;
+    margin: 2.5px 0;
 }
 #Ava .row{
-    border: 1px solid;
+    border: 1px solid #eee;
 }
 nav{
     padding:10px;
