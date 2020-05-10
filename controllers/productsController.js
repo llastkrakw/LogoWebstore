@@ -1,7 +1,7 @@
 /* Product */
 
 exports.product_list = function(req, res) {
-    res.send("liste de produits");
+    res.render("partials/products_list.ejs");
 }
 
 exports.products_infos = function(req, res) {
