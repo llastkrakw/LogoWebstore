@@ -1,0 +1,30 @@
+/* Product */
+const productManager = require("../models/productsManager");
+
+exports.product_list = function(req, res) {
+
+    const rows = productManager.all_categories();
+    const rows2 = productManager.all_products();
+    res.render("partials/products_list", { categories: rows, products: rows2 });
+
+}
+
+exports.products_infos = function(req, res) {
+
+    const produits = productManager.all_products();
+    var rows;
+    var isIn = false;
+
+    produits.forEach(row => {
+        if (row.id == req.params.idProduit) {
+            rows = productManager.get_product(req.params.idProduit);
+            isIn = true;
+        }
+    });
+
+    if (IsIn) {
+        res.render("partials/product_info", { product: rows });
+    } else {
+        res.redirect('/')
+    }
+}
