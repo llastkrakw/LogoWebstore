@@ -5,8 +5,11 @@ let qte = 0;//Variable qui gère la quantité que le visiteur souhaite acheter
  * Si oui, on incrémente/décrémente la quantité et on remplace la "value" du champ
  * Sinon on revient à 0
 **/
-let ajouter_occurence = () => document.getElementById('nbre_elements').value = (Number(document.getElementById('nbre_elements').value)>0) ? String(++qte) : "0";
-let diminuer_occurence = () => document.getElementById('nbre_elements').value = (Number(document.getElementById('nbre_elements').value)) ? String(--qte) : "0";
+let ajouter_occurence = () => document.querySelector('#nbre_elements').value = (Number(document.querySelector('#nbre_elements').value)>0) ? String(++qte) : "1";
+let diminuer_occurence = () => document.querySelector('#nbre_elements').value = (Number(document.querySelector('#nbre_elements').value)>2) ? String(--qte) : "1";
+
+//Fonction qui change l'url d'ajout dans le panier à chaque fois que la quantité de celui-ci est modifiée
+let sendQte = () => document.querySelector('#ajout').href = "panier.html?qte=" + document.querySelector('#nbre_elements').value;
 
 //Fonction qui permet de charger une image en miniature sur la vitrine
 let image_loader = (image) => document.querySelector('#imgp').src = image.src;
