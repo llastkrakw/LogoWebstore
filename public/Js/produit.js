@@ -12,8 +12,9 @@ let diminuer_occurence = () => document.getElementById('nbre_elements').value = 
 let image_loader = (image) => document.querySelector('#imgp').src = image.src;
 
 //Fonction qui affiche en console l'objet d'avis du visiteur après le clique sur le bouton d'envoi
-document.querySelector("#Submit").addEventListener("click", function () {
+function displayComment() {
     const day = new Date();
-    const newObject = {date: date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear(), avis : document.querySelector("#Avis").value};
+    const newObject = {date: day.getDate() + "/" + (day.getMonth()+1) + "/" + day.getFullYear(), avis : document.querySelector("#avis").value};
     console.log(newObject);
-});
+    document.querySelector("#avis").value = "";
+}
