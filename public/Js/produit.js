@@ -13,11 +13,11 @@ let sendQte = () => document.querySelector('#ajout').href = "panier.html?qte=" +
 
 //Fonction qui permet de charger une image en miniature sur la vitrine
 let image_loader = (blocImage) => {
-    document.querySelector('#imgp').src = blocImage.querySelector('img').src;
+    document.querySelector('#imgp').src = blocImage.querySelector('img').src;//remplace l'image sur la vitrine
     let imgbars = document.querySelectorAll('.imgbar');
-    for(let i=0; i<imgbars.length; i++)
-        imgbars[i].style = "height: 3px; background: #e9ecef;";
-    blocImage.querySelector('.imgbar').style = "height: 3px; background : #007bff;";
+    for(let i=0; i<imgbars.length; i++)//remets toutes les images avec le style par défaut
+        imgbars[i].style = "height: 3px;";
+    blocImage.querySelector('.imgbar').style = "height: 3px; background : #007bff;";//Souligne en bleu l'image sur la vitrine
 };
 
 //Fonction qui affiche en console l'objet d'avis du visiteur après le clique sur le bouton d'envoi
