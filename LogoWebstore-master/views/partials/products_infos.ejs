@@ -1,0 +1,88 @@
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-8">
+                <div class="row" style="justify-content: center">
+                    <img id="imgp" src="/images/produit_newyork_0.jpeg" />
+                </div>
+                <div class="row" id="Img" style="justify-content: space-between">
+                    <div class="col-2"><img name="img1" src="/images/produit_newyork_0.jpeg" onclick="image_loader(this)"></div>
+                    <div class="col-2"><img id="img2" src="/images/produit_newyork_1.jpeg" onclick="image_loader(this)"></div>
+                    <div class="col-2"><img id="img3" src="/images/produit_newyork_2.jpeg" onclick="image_loader(this)"></div>
+                    <div class="col-2"><img id="img4" src="/images/produit_newyork_3.jpeg" onclick="image_loader(this)"></div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h2>LEGO Architechture</h2>
+                <h3>New York City</h3><br>
+                <h1>49.99$</h1>
+                <div class="alert alert-success" style="text-align: end">En Stock</div>
+                <hr/>
+                <form name="Commande" style="display: flex;flex-direction: column;align-items: flex-end">
+                    <div class="row" style="margin-right: 2px">
+                       <button class="btn btn-light" style="border: 1px solid #ddd" onclick="diminuer_occurence();sendQte();return false;"> - </button> <input type="number" id="nbre_elements" name="nbre_elts" class="quantity" value="1" style="width: 45px;border-radius: 3px;-moz-appearance: textfield; text-align: center;border: none;background: #bbb;color: #fff"><button class="btn btn-light" style="border: 1px solid #ddd" onclick="ajouter_occurence();sendQte();return false;"> + </button>
+                    </div>
+                    <a href="panier.html?qte=1" id="ajout" class="add-to-cart form-control btn btn-primary " style="width: 160px;" data-id="" data-name="New York City" data-price="49.99">Ajouter au panier</a>
+                </form>
+            </div>
+        </div>
+        <div class="row" style="justify-content: space-between">
+            <div class="col-7">
+                <div class="row">
+                    <h4>Description du produit</h4>
+                    <p style="text-align:justify">Fêtez la diversité architecturale de New York avec ce modèle détaillé en briques
+                        LEGO. La collection LEGO Architecture Skyline offre des modèles adaptés à
+                        l'exposition à la maison et au bureau, et a été développée pour toutes les
+                        personnes qui s'intéressent au voyage, à la création, à l'histoire et à
+                        l'architecture.
+                        Chaque ensemble a une échelle adaptée pour donner une idée précise de la taille
+                        comparative de chaque structure, avec une représentation en couleurs réalistes.
+                        Cet ensemble comprend le Flatiron Building, le Chrysler Building, l'Empire State
+                        Building, le One World Trade Center et la Statue de la Liberté, et un écriteau
+                        décoratif “New York”.</p>
+                </div>
+                <div class="row">
+                    <h4>Spécificités</h4>
+                    <p style="text-align: justify">Interprétation LEGO du paysage de New York.
+                        Comprend le Flatiron Building, le Chrysler Building, l'Empire State Building,
+                        le One World Trade Center et la Statue de la Liberté.
+                        Inclut une plaque de base 4x32 avec un écriteau décoratif "New York".
+                        Recréez les plus belles villes du monde avec la collection LEGO Architecture
+                        Skyline.
+                        Mesure 26 cm de haut, 25 cm de large et 4 cm de profondeur.
+                        Source: Site officiel LEGO</p>
+                </div>
+            </div>
+            <div class="col-4" id="Ava">
+                <h4>Avis</h4>
+                <div class="row">
+                    <div class="col-lg-3"><img src="/images/avatar.png"></div>
+                    <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                    <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"><img src="/images/avatar.png"></div>
+                    <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                    <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"><img src="/images/avatar.png"></div>
+                    <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                    <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"><img src="/images/avatar.png"></div>
+                    <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                    <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="oi oi-pencil"></span>
+                    </div>
+                    <input type="text" id="avis" class="form-control" onkeypress="if(event.keyCode == 13) displayComment()" placeholder="Rédiger un avis" />
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="/javascripts/produit.js"></script>
+        <script src="/javascripts/panier.js"></script>

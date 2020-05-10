@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- TODO include head -->
+    <% include partials/head %>
+    <title>LEGO Webstore</title>
+  </head>
+  <body>
+    <!-- TODO include nav -->
+    <% include partials/nav %>
+    
+    <!-- TODO include parameter page-->
+    <%- include (page) %>
+
+    <!--TODO include footer -->
+    <% include partials/footer %>
+  </body>
+</html>
