@@ -27,6 +27,104 @@
     <!-- Liste -->
     <div class="col-lg-9 border-left">
 
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-8">
+                    <div class="row" style="justify-content: center">
+                        <img id="imgp" src="/img/produit_newyork_0.jpeg" />
+                    </div>
+                    <div class="row" id="Img" style="justify-content: space-between">
+                        <div class="col-2"><img name="img1" src="/img/produit_newyork_0.jpeg" onclick="image_loader(this)">
+                            <div class="progress invalid-feedback" style="height: 3px">
+                                <div class="progress-bar bg-success" role="progressbar" id="imgbar1" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="col-2"><img id="img2" src="/img/produit_newyork_1.jpeg" onclick="image_loader(this)">
+                            <div class="progress invalid-feedback" style="height: 3px">
+                                <div class="progress-bar bg-success" role="progressbar" id="imgbar2" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="col-2"><img id="img3" src="/img/produit_newyork_2.jpeg" onclick="image_loader(this)">
+                            <div class="progress invalid-feedback" style="height: 3px">
+                                <div class="progress-bar bg-success" role="progressbar" id="imgbar3" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="col-2"><img id="img4" src="/img/produit_newyork_3.jpeg" onclick="image_loader(this)">
+                            <div class="progress invalid-feedback" style="height: 3px">
+                                <div class="progress-bar bg-success" role="progressbar" id="imgbar4" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h2>LEGO Architechture</h2>
+                    <h3>New York City</h3><br>
+                    <h1>49.99$</h1>
+                    <hr>
+                    <div class="alert alert-success" style="text-align: end">En Stock</div>
+                    <form name="Commande">
+                        <div class="row" style="align-content: flex-end">
+                            <button class="btn btn-light" style="border: 1px solid #ddd" onclick="diminuer_occurence();return false;"> - </button> <input type="number" id="nbre_elements" name="nbre_elts" class="quantity" value="1" style="width: 45px;border-radius: 3px;-moz-appearance: textfield; text-align: center;border: none;background: #bbb;color: #fff">
+                            <button class="btn btn-light" style="border: 1px solid #ddd" onclick="ajouter_occurence();return false;"> + </button>
+                        </div>
+                        <button type="button" id="ajout" class="add-to-cart form-control btn btn-primary " data-id="" data-name="New York City" data-price="49.99">Ajouter au panier</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row" style="justify-content: space-between">
+                <div class="col-7">
+                    <div class="row">
+                        <h4>Description du produit</h4>
+                        <p style="text-align:justify">Fêtez la diversité architecturale de <a href "https://fr.wikipedia.org/wiki/New_York" target="_blank">New York</a> avec ce modèle détaillé en briques
+                            <a href="https://shop.lego.com/fr-FR/" target="_blank">LEGO</a>. La collection LEGO Architecture Skyline offre des modèles adaptés à l'exposition à la maison et au bureau, et a été développée pour toutes les personnes qui s'intéressent
+                            au voyage, à la création, à l'histoire et à l'architecture. Chaque ensemble a une échelle adaptée pour donner une idée précise de la taille comparative de chaque structure, avec une représentation en couleurs réalistes. Cet
+                            ensemble comprend le Flatiron Building, le Chrysler Building, l'Empire State Building, le One World Trade Center et la Statue de la Liberté, et un écriteau décoratif “New York”.</p>
+                    </div>
+                    <div class="row">
+                        <h4>Spécificités</h4>
+                        <p style="text-align: justify; text-indent: 10px">
+                            <ul>
+                                <li>Interprétation LEGO du paysage de New York.</li>
+                                <li>Comprend le Flatiron Building, le Chrysler Building, l'Empire State Building, le One World Trade Center et la Statue de la Liberté.</li>
+                                <li>Inclut une plaque de base 4x32 avec un écriteau décoratif "New York".</li>
+                                <li>Recréez les plus belles villes du monde avec la collection LEGO Architecture Skyline.
+                                </li>
+                                <li>Mesure 26 cm de haut, 25 cm de large et 4 cm de profondeur.</li>
+                                Source: Site officiel LEGO</p>
+                    </div>
+                </div>
+                <div class="col-4" id="Ava">
+                    <h4>Avis</h4>
+                    <div class="row">
+                        <div class="col-lg-3"><img src="/img/avatar.png"></div>
+                        <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                        <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3"><img src="/img/avatar.png"></div>
+                        <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                        <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3"><img src="/img/avatar.png"></div>
+                        <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                        <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3"><img src="/img/avatar.png"></div>
+                        <div class="col-lg-8">Nom<br>17/04/2001</div><br><br>
+                        <div class="col-lg-11">Lorem Ipsum Dolor</div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="oi oi-pencil"></span>
+                        </div>
+                        <input type="text" id="avis" class="form-control" onkeypress="if(event.keyCode == 13) displayComment()" placeholder="Rédiger un avis" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <%- include footer %>
