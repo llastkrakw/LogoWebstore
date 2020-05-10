@@ -13,10 +13,11 @@ input{
     float: right;
 }
 #Ava div div{
-    margin: 2.5px 0;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
 }
 #Ava .row{
-    border: 1px solid #eee;
+    border: 1px solid;
 }
 nav{
     padding:10px;
@@ -27,9 +28,6 @@ footer
     margin-right: 17.5%;
     bottom:0;
     width:65%;
-}
-div.minImg:hover .imgbar {
-    background: rgb(182, 182, 182);
 }
 
 .fade.in {

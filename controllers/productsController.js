@@ -1,9 +1,29 @@
 /* Product */
+const productManager = require("../models/productsManager");
 
 exports.product_list = function(req, res) {
-    res.render("partials/products_list.ejs");
+
+    const rows = productManager.all_categories();
+    const rows2 = productManager.all_products();
+    res.render("partials/products_list", { categories: rows, products: rows2 });
+
 }
 
 exports.products_infos = function(req, res) {
-    res.send("Fiche produit : " + req.params.idProduit)
+
+    const produits = productManager.all_products();
+    var isIn = false;
+
+    rows2.forEach(row => {
+        if (row.id == req.params.idProduit) {
+            const rows = productManager.get_product(req.params.idProduit);
+            isIn = true;
+        }
+    });
+
+    if (IsIn) {
+        res.render("partials/product_info", { product: rows });
+    } else {
+        res.redirect('/')
+    }
 }
