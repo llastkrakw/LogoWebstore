@@ -28,6 +28,9 @@ footer
     bottom:0;
     width:65%;
 }
+div.minImg:hover .imgbar {
+    background: rgb(182, 182, 182);
+}
 
 .fade.in {
   opacity: 1;
