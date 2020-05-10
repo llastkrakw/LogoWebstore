@@ -14,4 +14,4 @@ function GET_url(param){//param : Paramètre qu'on souhaite récupérer dans l'u
 }
 
 let $_GET = GET_url();
-let price = ($_GET['qte'] * $_GET['pu']), TVA = $_GET['pu']*15/100, totalPrice = price + TVA;
+let price = (Number($_GET['qte']) * Number($_GET['pu'])), TVA = Number($_GET['pu'])*15/100, totalPrice = price + TVA;
