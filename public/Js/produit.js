@@ -12,7 +12,13 @@ let diminuer_occurence = () => document.querySelector('#nbre_elements').value = 
 let sendQte = () => document.querySelector('#ajout').href = "panier.html?qte=" + document.querySelector('#nbre_elements').value;
 
 //Fonction qui permet de charger une image en miniature sur la vitrine
-let image_loader = (image) => document.querySelector('#imgp').src = image.src;
+let image_loader = (blocImage) => {
+    document.querySelector('#imgp').src = blocImage.querySelector('img').src;
+    let imgbars = document.querySelectorAll('.imgbar');
+    for(let i=0; i<imgbars.length; i++)
+        imgbars[i].style = "height: 3px; background: #e9ecef;";
+    blocImage.querySelector('.imgbar').style = "height: 3px; background : #007bff;";
+};
 
 //Fonction qui affiche en console l'objet d'avis du visiteur après le clique sur le bouton d'envoi
 function displayComment() {
